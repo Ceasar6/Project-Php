@@ -4,7 +4,7 @@
 namespace Study\Controller;
 
 
-class GrandeController
+class GradeController
 {
 
 }

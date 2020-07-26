@@ -26,7 +26,7 @@ class Grades
     /**
      * @param mixed $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -42,7 +42,7 @@ class Grades
     /**
      * @param mixed $grade_name
      */
-    public function setGradeName($grade_name): void
+    public function setGradeName($grade_name)
     {
         $this->grade_name = $grade_name;
     }
@@ -58,7 +58,7 @@ class Grades
     /**
      * @param mixed $status
      */
-    public function setStatus($status): void
+    public function setStatus($status)
     {
         $this->status = $status;
     }

@@ -4,7 +4,7 @@
 namespace Study\Model;
 
 
-class Grades
+class Grade
 {
     protected $id;
     protected $grade_name;

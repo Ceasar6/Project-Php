@@ -33,7 +33,7 @@ class StudentManager
     function addStudent($student)
     {
         $sql = "INSERT INTO `tbl_students`(`student_name`, `age`, `gender`, `address`, `email`, `image`, `grade_id`) 
-VALUES (:student_name, :age, :gender, :address, :email, :image, :grade)";
+VALUES (:student_name, :age, :gender, :address, :email, :image, :grade_id)";
         $stmt = $this->database->prepare($sql);
         $stmt->bindParam(':student_name', $student->getStudentName());
         $stmt->bindParam(':age', $student->getAge());
@@ -41,7 +41,7 @@ VALUES (:student_name, :age, :gender, :address, :email, :image, :grade)";
         $stmt->bindParam(':address', $student->getAddress());
         $stmt->bindParam(':email', $student->getEmail());
         $stmt->bindParam(':image', $student->getImage());
-        $stmt->bindParam(':grade', $student->getGrade());
+        $stmt->bindParam(':grade_id', $student->getGradeId());
         $stmt->execute();
     }
 

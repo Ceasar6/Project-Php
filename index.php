@@ -4,6 +4,7 @@ use Study\Controller\GradeController;
 use Study\Controller\SubjectController;
 $gradeController = new \Study\Controller\GradeController();
 $subjectController = new SubjectController();
+$studentController = new \Study\Controller\StudentController();
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 include_once('src/View/menu/menu.php');
 ?>
@@ -48,6 +49,12 @@ include_once('src/View/menu/menu.php');
             break;
         case 'delete-grade':
             $gradeController->deleteGrade();
+            break;
+        case 'list-student':
+            $studentController->viewStudent();
+            break;
+        case 'add-student':
+            $studentController->addStudent();
             break;
         default:
             $gradeController->showListGrade();
